@@ -1,0 +1,36 @@
+sudo apt-get update 
+sudo apt-get upgrade
+
+### install php ###
+sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+echo "deb https://packages.sury.org/php/ buster main" | sudo tee /etc/apt/sources.list.d/php.list
+sudo apt update
+sudo apt install -y php7.4-common php7.4-fpm php7.4-cli php7.4-curl php7.4-json php7.4-mysql php7.4-opcache php7.4-gd php7.4-sqlite3 php7.4-mbstring php7.4-zip php7.4-readline php-pear
+sudo apt-get install libapache2-mod-php7.4
+
+### install apache2 ###
+sudo apt-get install apache2
+
+### install mariadb (mysql) ###
+sudo apt-get install mariadb-server
+sudo mysql_secure_installation // answer y to all questions
+sudo mysql -uroot -p // enter the password set previously
+> CREATE DATABASE wordpress;
+> CREATE USER 'glider'@'localhost' IDENTIFIED BY 'alphadelta2002';
+> GRANT ALL PRIVILEGES ON wordpress.* TO 'glider'@'localhost';
+> FLUSH PRIVILEGES;
+> exit
+sudo mysql -uglider -palphadelta2002 // to test your connection to the database
+
+### install wordpress ###
+cd /var/www/html/
+sudo rm *
+sudo wget https://wordpress.org/latest.zip -O /var/www/html/wordpress.zip // to download wordpress
+sudo unzip wordpress.zip
+sudo chmod 755 wordpress -R
+sudo chown www-data wordpress -R
+
+
+
+
+
