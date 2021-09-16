@@ -58,7 +58,7 @@ while 1==1:
 		password = input("chose a password for your database : ")
 		print()
 		print()
-		print("open a new terminal and copy and past following lines one by one and change infos between [] : ")
+		print("open a new terminal and copy & past following lines one by one  : ")
 		print()
 		print()
 		print()
