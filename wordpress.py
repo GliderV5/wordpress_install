@@ -37,11 +37,9 @@ while 1==1:
 		os.system("sudo apt-get update && apt-get upgrade")
 	elif choix == str(2):
 		print()
-		os.system("sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg")
-		os.system('echo "deb https://packages.sury.org/php/ buster main" | sudo tee /etc/apt/sources.list.d/php.list')
-		os.system("sudo apt update")
-		os.system("sudo apt install -y php7.4-common php7.4-fpm php7.4-cli php7.4-curl php7.4-json php7.4-mysql php7.4-opcache php7.4-gd php7.4-sqlite3 php7.4-mbstring php7.4-zip php7.4-readline php-pear")
-		os.system("sudo apt-get install libapache2-mod-php7.4")
+		os.system("sudo add-apt-repository ppa:ondrej/php")
+		os.system('sudo apt-get update')
+		os.system("sudo apt install php8.1")
 	elif choix == str(3):
 		os.system("sudo apt-get install apache2")
 	elif choix == str(4):
