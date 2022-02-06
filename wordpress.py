@@ -40,6 +40,7 @@ while 1==1:
 		os.system("sudo add-apt-repository ppa:ondrej/php")
 		os.system('sudo apt-get update')
 		os.system("sudo apt install php8.1")
+		os.system("sudo apt-get install php-mysql")
 	elif choix == str(3):
 		os.system("sudo apt-get install apache2")
 	elif choix == str(4):
