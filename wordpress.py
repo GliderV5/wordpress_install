@@ -41,6 +41,7 @@ while 1==1:
 		os.system('sudo apt-get update')
 		os.system("sudo apt install php8.1")
 		os.system("sudo apt-get install php-mysql")
+		os.system("sudo apt install php8.1-mysql")
 	elif choix == str(3):
 		os.system("sudo apt-get install apache2")
 	elif choix == str(4):
