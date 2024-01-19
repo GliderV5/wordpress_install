@@ -22,7 +22,7 @@ while 1==1:
 	print()
 	print()
 	print("1) update system")
-	print("2) install php 7.4")
+	print("2) install php 8.1")
 	print("3) install apache2")
 	print("4) install mariadb")
 	print("5) config mariadb")
