@@ -62,7 +62,7 @@ while 1==1:
 		print()
 		print()
 		print()
-		print("sudo mysql -uroot -p")
+		print("sudo mysql -u root -p")
 		print("CREATE DATABASE wordpress;")
 		print("CREATE USER '"+ user +"'@'localhost' IDENTIFIED BY '"+ password +"';")
 		print("GRANT ALL PRIVILEGES ON wordpress.* TO '"+ user +"'@'localhost';")
